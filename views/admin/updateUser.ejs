@@ -1,0 +1,55 @@
+<%- include('../layouts/header') %>
+<%- include('../layouts/navbar')%>
+<div class="loginContainer">
+  <div class="left-section">
+    <div class="login-header">
+      <h1>Update User</h1>
+      <% if (typeof message !== 'undefined') { %>
+        <div class="message"><%= message %></div>
+      <% } %>
+      <% if (typeof error !== 'undefined') { %>
+        <div class="error"><%= error %></div>  
+      <% } %>
+    </div>
+    <div class="login-form-section">
+        <form action="/admin/editUser" method="post">
+            <div class="username-container">
+                <input class="fname" type="text" placeholder="first name" value="<%=user.fname%>" name="fname">
+                <input class="lname" type="text" placeholder="last name" value="<%=user.sname%>" name="sname"> 
+            </div>
+            <div  class="phone-email">
+              <input class="phone-input" type="number" placeholder="phone" value="<%=user.phone%>" name="phone">
+            <input class="email-input" type="email" placeholder="email" value="<%user.email%>" name="email">
+            </div>
+            
+            <input class="password-input" type="password" name="password" placeholder="password">
+            <input class="password-input" type="password" name="cpassword" placeholder="confirm password">
+            <input type="hidden" value="<%=user._id%>" name="id">
+
+            <div class="file-container">
+              <!-- <input type="file" class="file-input" name="image"/> -->
+              <div class="admin-checkbox">
+                <input class="checkbox-field" type="checkbox" value="true" name="isAdmin">
+                <label for="isAdmin">Make Admin</label>
+            </div>
+            </div>
+            
+            
+            <div class="button-container">
+                <button class="sign-in-btn">Update</button>
+            </div>
+            <div class="register-redirect">
+              <a href="/admin/dashboard">Click here to go home</a>
+            </div>
+        </form>
+        
+    </div>
+  </div>
+
+
+
+
+
+
+
+

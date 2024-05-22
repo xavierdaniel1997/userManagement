@@ -1,0 +1,19 @@
+<%-include('../layouts/header')%> 
+<%-include('../layouts/navbar')%>
+<div class="home-container">
+  <div class="home-wrapper">
+    <div class="user-dp-wrapper">
+        <img class="dp" src="/assets/userImages/<%=data.image%>" alt="">
+    </div>
+    <div class="user-detials">
+      <h3>Welcome back..</h3>
+      <p><%=data.fname%> <%=data.sname%></p>
+      <p><%=data.phone%></p>
+      <p><%=data.email%></p>
+    </div>
+    <div class="logout-btn-container">
+      <button class="logout-btn" onclick="window.location.href='/logout'">Logout</button>
+    </div>
+  </div>
+</div>
+<%-include('../layouts/footer')%>

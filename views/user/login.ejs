@@ -1,0 +1,31 @@
+<%- include('../layouts/header') %>
+<%- include('../layouts/navbar')%>
+<div class="loginWrapper">
+  <div class="left-section">
+    <div class="login-header">
+      <h1>Login</h1> 
+      <p>To Get start..</p>
+      <% if (typeof error !== 'undefined') { %>
+        <div class="error"><%= error %></div>
+      <% } %>
+      <% if (typeof message !== 'undefined') { %>
+        <div class="error"><%= message %></div>
+      <% } %>
+    </div>
+    <div class="login-form-section">
+        <form action="/login" method="POST">
+            <input class="email-input" type="email" placeholder="email" name="email">
+            <input class="password-input" type="password" name="password" placeholder="password">
+            <div class="button-container">
+                <button class="sign-in-btn">Sign In</button>
+            </div>
+            <div class="register-redirect">
+              <p>Dont have an account ? </p>
+              <a href="/register">Click here to Register</a>
+            </div>
+        </form>
+        
+    </div>
+  </div>
+</div>
+<%- include('../layouts/footer') %>

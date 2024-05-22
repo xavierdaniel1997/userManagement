@@ -1,0 +1,52 @@
+<%- include('../layouts/header') %>
+<%- include('../layouts/navbar')%>
+<div class="loginContainer">
+  <div class="left-section">
+    <div class="login-header">
+      <h1>Sign Up</h1>
+      <p>Get start..</p>
+      <% if (typeof message !== 'undefined') { %>
+        <div class="message"><%= message %></div>
+      <% } %>
+      <% if (typeof error !== 'undefined') { %>
+        <div class="error"><%= error %></div>  
+      <% } %>
+    </div>
+    <div class="login-form-section">
+        <form action="/register" method="POST" enctype="multipart/form-data">
+            <div class="username-container">
+                <input class="fname" type="text" placeholder="first name" name="fname">
+                <input class="lname" type="text" placeholder="last name" name="sname"> 
+            </div>
+            <div class="phone-email">
+              <input class="phone-input" type="number" placeholder="phone" name="phone">
+            <input class="email-input" type="email" placeholder="email" name="email">
+            </div>
+            
+            <input class="password-input" type="password" name="password" placeholder="password">
+            <input class="password-input" type="password" name="cpassword" placeholder="confirm password">
+
+            <div class="file-container">
+              <input type="file" class="file-input" name="image"/>
+            </div>
+            
+            
+            <div class="button-container">
+                <button class="sign-in-btn">Sign Up</button>
+            </div>
+            <div class="register-redirect">
+              <p>Already have an account ? </p>
+              <a href="/">Click here to Login</a>
+            </div>
+        </form>
+        
+    </div>
+  </div>
+
+
+
+
+
+
+
+

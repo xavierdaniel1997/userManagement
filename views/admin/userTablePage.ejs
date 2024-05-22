@@ -1,0 +1,87 @@
+<%- include('../layouts/header')%> 
+<%- include('../layouts/navbar')%>
+<div class="usertable-contaier">
+  <div class="usertable-left">
+    <%-include('../layouts/sidebar')%>
+  </div>
+  <div class="usertable-right">
+    <div class="search-add">
+
+      <form class="search-container" action="/admin/userTable" method="GET">
+      <input type="text" placeholder="search users" class="search-input" name="searchQuery">
+      <button class="search-btn" type="submit">Search</button>
+      </form>
+
+
+    <button class="add-user-btn" onclick="window.location.href='/admin/addUser'">ADD USERS</button>
+  </div>
+
+  <div class="table-container">
+    <% if(userData.length > 0) { %>
+      <table class="user-table">
+        <thead>
+            <tr>
+                <th>Profile</th>
+                <th>Name</th>
+                <th>Email ID</th>
+                <th>Phone Number</th>
+                <th>Edit</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+          
+            <% userData.forEach((user) => { %>
+              <tr>
+                <td><img class="table-user-dp" src="/assets/userImages/<%=user.image%>" alt=""></td>
+                <td><%=user.fname%> <%=user.sname%></td>
+                <td><%=user.email%></td>
+                <td><%=user.phone%></td>
+                <td class="edituser" onclick="window.location.href='/admin/updateUser?id=<%=user._id%>'">Edit</td>
+                <td onclick="window.location.href='deletUser?id=<%=user._id%>'" class="deleteUser">Delete</td>
+              </tr>
+            <%})%>
+        </tbody>
+    </table>
+    <%}else{%>
+      <h1>No users found</h1>
+    <%}%>
+   
+</div>
+
+
+  </div>
+</div>
+<%- include('../layouts/footer')%>
+
+
+
+
+
+<!-- 
+<% userData.forEach((user) => { %>
+  <li><%=user.fname%></li>
+<% }) %> -->
+
+<!-- <table class="user-table">
+  <thead>
+      <tr>
+          <th>Profile</th>
+          <th>Name</th>
+          <th>Email ID</th>
+          <th>Phone Number</th>
+          <th>Edit</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <% userData.forEach((user) => { %>
+          <td><img src="profile1.jpg" alt="Profile Picture"></td>
+          <td><%=user.fname%> <%=user.sname%></td>
+          <td>johndoe@example.com</td>
+          <td>123-456-7890</td>
+          <td><a href="#">Edit</a></td>
+       <% }) %>
+      </tr>
+  </tbody>
+</table> -->

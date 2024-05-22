@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* navbar */
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d5d5d5;
+    padding: 0 2rem;
+}
+.left-nav-section{
+
+}
+.log p{
+    font-weight: 800;
+    font-size: 28px;
+    color: #000000;
+    padding: 1.5rem 2rem;
+
+}
+.log p span{
+    color: #5dcdb3;
+}
+
+/* login page section */
+.loginWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-section{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 2rem 4rem;
+    gap: 2rem;
+    background: #ededed;
+    border-radius: 10px;
+}
+.login-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.login-header h1{
+    font-weight: 700;
+    font-size: 38px;
+}
+.login-header p{
+    font-size: 24px;
+    font-weight: 600;
+    color: gray;
+}
+.error{
+    font-size: 16px;
+    color: red;
+    background-color: #c7cbca;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+}
+.message{
+    font-size: 16px;
+    color: green;
+    background-color: #c7cbca;
+    padding: 1rem 8rem;
+    border-radius: 5px;
+}
+
+.login-form-section form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.email-input, .password-input, .phone-input{
+    border: 1px solid #d5d5d5 ;
+    outline: none;
+    padding: .8rem;
+    font-size: 16px;
+    color: grey;
+    border-radius: 10px;
+    width: 100%;
+}
+.password-input-admin, .email-input-admin{
+    border: 1px solid #d5d5d5 ;
+    outline: none;
+    padding: .8rem;
+    font-size: 16px;
+    color: grey;
+    border-radius: 10px;
+    width: 400px;
+}
+.username-container, .phone-email{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.fname, .lname{
+    border: 1px solid #d5d5d5 ;
+    outline: none;
+    padding: .8rem;
+    font-size: 16px;
+    color: grey;
+    border-radius: 10px;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sign-in-btn{
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #5dcdb3;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 500;
+}
+.register-redirect{
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+}
+.register-redirect a{
+    color: #235823;
+    text-decoration: none;
+}
+.file-container{
+    width: 100%;
+}
+.file-input{
+    border: none;
+}
+
+/* user home page  */
+.home-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+}
+.home-wrapper{
+    margin-top: 3rem;
+    padding: 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: rgb(221,224,211);
+background: linear-gradient(90deg, rgba(221,224,211,1) 23%, rgba(246,246,246,1) 97%);
+    border-radius: 10px;
+}
+.dp{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-detials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.user-detials h3{
+    font-size: 32px;
+}
+.user-detials p{
+    font-size: 26px;
+    font-weight: 300;
+    color: gray;
+}
+.logout-btn-container{
+    display: flex;
+    align-items: center;
+}
+.logout-btn{
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #5dcdb3;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 500;
+}
+
+
+/* admin dashboard */
+
+
+.admin-container{
+    display: flex;
+    justify-content: space-between;
+}
+.admin-left-container{
+    /* flex: 1; */
+    background-color: #ebebeb;
+    height: 88vh;
+    width: 300px;
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.top-items{
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    padding: 0px 1rem;
+}
+.top-items li{
+    list-style: none;
+    padding: 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #c7cbca;
+    cursor: pointer;
+}
+
+.admin-dp-wrapper{
+    text-align: center;
+    margin-top: 2rem;
+}
+.admin-dp{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.admin-detials{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+.admin-detials p{
+    font-size: 24px;
+    font-weight: 600;
+    color: #121212;
+}
+.bottom-item{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.admin-logout-btn{
+    margin-top: 1rem;
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #5dcdb3;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 500;
+}
+.admin-home-container, .usertable-contaier{
+    display: flex;
+    justify-content: space-between;
+}
+.left-home,.usertable-left{
+    flex: 1;
+}
+.right-home, .usertable-right{
+    flex: 4;
+}
+.home-detials{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 4rem;
+}
+.usertable-right{
+    margin: 4rem 5rem;
+}
+.search-add{
+    display: flex;
+    justify-content: space-between;
+}
+.search-container{
+    width: 350px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.search-input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 18px;
+    padding-left: 5px;
+}
+.search-btn{
+    border: none;
+    font-size: 18px;
+    background-color: #235823;
+    padding: 10px 15px;
+    color: #fff;
+}
+.add-user-btn{
+    border: none;
+    font-size: 18px;
+    background-color: #5dcdb3;
+    padding: 10px 18px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+.table-container {
+    max-height: 400px; 
+    overflow-y: auto;
+    margin-top: 3rem;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+}
+
+.user-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.user-table tbody tr:hover {
+    background-color: #ddd;
+}
+.table-user-dp{
+    width: 100px;
+    height: 100px;
+    border: 5px;
+    object-fit: cover;
+}
+.file-container{
+    display: flex;
+    align-items: center;
+}
+.edituser{
+    cursor: pointer;
+}
+.deleteUser{
+    cursor: pointer;
+}
